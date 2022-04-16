@@ -12,6 +12,8 @@ def LightGBM(X_train, X_test, y_train, y_test, fig):
           'objective': 'regression',    # 回帰を指定
           'metric': 'rmse',             # 回帰の評価関数
           'learning_rate': 0.1,         # 学習率
+          'feature_fraction': 0.8,
+          'num_leaves': 63
           }
     
     model = lgb.train(
@@ -19,7 +21,7 @@ def LightGBM(X_train, X_test, y_train, y_test, fig):
                       train_set=lgb_train,              # 訓練データを訓練用にセット
                       valid_sets=[lgb_train, lgb_test], # 訓練データとテストデータをセット
                       valid_names=['Train', 'Test'],    # データセットの名前をそれぞれ設定
-                      num_boost_round=100,              # 計算回数
+                      num_boost_round=200,              # 計算回数
                       early_stopping_rounds=50,         # アーリーストッピング設定
                       evals_result=lgb_results,             # 学習の履歴を保存
                       verbose_eval=-1                           # ログを最後の1つだけ表示
