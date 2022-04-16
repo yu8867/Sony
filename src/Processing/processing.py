@@ -28,4 +28,3 @@ def rmse(y_pred, y_true):
     rmse = np.sqrt(mean_squared_error(y_pred, y_true))
     print(rmse)
     
-print("hello")
