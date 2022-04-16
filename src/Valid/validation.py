@@ -8,7 +8,8 @@ def rmse(y_pred, y_true):
 def mse(y_pred, y_true):
     mse = mean_squared_error(y_pred, y_true)
     print("MSE: ",mse)
-    
+
+# モデルの当てはまり度を調べる
 def r_2(y_pred, y_true):
     r2 = r2_score(y_pred, y_true)
     print("R^2: ",r2)
