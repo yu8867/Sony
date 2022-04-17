@@ -8,11 +8,13 @@ import matplotlib.pyplot as plt
 def NN(X_train, X_test, y_train, y_test, fig):
     nn1 = 64
     nn2 = 32
+    # nn3 = 32
     input_dim = len(X_train.columns)
     
     model = Sequential()
     model.add(Dense(nn1, activation='relu', input_dim=input_dim))
     model.add(Dense(nn2, activation='relu'))
+    # model.add(Dense(nn3, activation='relu'))
     model.add(Dense(1, activation='linear'))
 
     model.compile(optimizer='adam',
