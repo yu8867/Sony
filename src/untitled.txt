@@ -1,0 +1,14 @@
+1: LightGBM, varをstdに変換  特徴量×５５
+20.6933352-> 23.0206369
+
+2: xgboost, varをstdに変換  特徴量×５５
+20.39514666-> 22.8503853
+
+3: LightGBM, varをstdに変換 var削除 
+20.6098417-> 22.9555209
+
+4: xgboost, varをstdに変換 var削除
+20.3956135-> 22.8524559
+
+5: LightGBM, varをstdに変換 var削除 monthをdummy
+20.469423 ->22.6434831
