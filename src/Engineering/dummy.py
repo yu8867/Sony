@@ -30,5 +30,5 @@ def engin(df):
     df["ws_std"] = np.sqrt(df["ws_var"])
     df["dew_std"] = np.sqrt(df["dew_var"])
     
-    df = df.drop(columns = drop_cols)
+    df = df.drop(drop_cols ,axis=1)
     return df

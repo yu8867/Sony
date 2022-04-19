@@ -19,7 +19,7 @@ def XGBOOST(X_train, X_test, y_train, y_test, fig):
                       evals=evals,
                       evals_result=xgb_results,
                       early_stopping_rounds=20,
-                      verbose_eval=0  # type: ignore
+                      verbose_eval=200
                       )
     
     return model

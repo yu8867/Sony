@@ -12,3 +12,9 @@
 
 5: LightGBM, varをstdに変換 var削除 monthをdummy
 20.469423 ->22.6434831
+
+# 標準化+対数->LightGBMには意味なさそう
+
+
+
+
