@@ -13,8 +13,17 @@
 5: LightGBM, varをstdに変換 var削除 monthをdummy
 20.469423 ->22.6434831
 
+6: AutoLGBM,
+19.0865403 ->21.5925737
+
+7: LightGBM, dummy [month, year, contry]
+
 # 標準化+対数->LightGBMには意味なさそう
 
+
+
+標準化＋対数ー＞LGBM、xgbは意味なかった。
+大陸×
 
 
 
