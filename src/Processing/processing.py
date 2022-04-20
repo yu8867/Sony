@@ -22,6 +22,6 @@ def Valid(X, y):
 def Submission(index, predict, name):
     submission = np.stack([index, predict])
     submission = pd.DataFrame(submission).T
-    submission.to_csv("submission/submission_{}.csv".format(name),index=False, header=False)
+    submission.to_csv("C:/Users/yu886/OneDrive/デスクトップ/github/Sony/src/submission/submission_{}.csv".format(name),index=False, header=False)
     
     
