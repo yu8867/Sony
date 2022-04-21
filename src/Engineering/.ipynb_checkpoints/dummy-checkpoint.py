@@ -50,13 +50,13 @@ def engin_2(df):
     # weekday = pd.get_dummies(df['weekday'], prefix="week")
     # df = pd.concat([df,weekday], axis=1)
     
-    # month
-    month = pd.get_dummies(df['month'], prefix="month")
-    df = pd.concat([df, month], axis=1)
+#     # month
+#     month = pd.get_dummies(df['month'], prefix="month")
+#     df = pd.concat([df, month], axis=1)
     
-    # year
-    year = pd.get_dummies(df['year'], prefix="year")
-    df = pd.concat([df, year], axis=1)
+#     # year
+#     year = pd.get_dummies(df['year'], prefix="year")
+#     df = pd.concat([df, year], axis=1)
     
     # country
     country = pd.get_dummies(df['Country'])

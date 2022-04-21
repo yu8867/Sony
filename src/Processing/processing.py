@@ -10,7 +10,7 @@ def Split(df):
     
     col = ["id","pm25_mid"]
     X = df.drop(columns=col)
-    X_train, X_test, y_train, y_test = train_test_split(X,target,test_size=0.2, random_state=123)
+    X_train, X_test, y_train, y_test = train_test_split(X,target,test_size=0.2, random_state=123, shuffle=True)
     return X_train, X_test, y_train, y_test, index
 
 
