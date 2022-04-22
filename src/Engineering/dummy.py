@@ -4,14 +4,8 @@ from sklearn.model_selection import train_test_split
 import datetime
 
 def engin(df):
-    drop_cols = ['year', 'month', 'day', 'Country', 'City', 'lat',
-                'lon','co_var', 'o3_var','so2_var', 'no2_var',
-                'temperature_var', 'humidity_var', 'pressure_var',
-                'ws_var','dew_var']
+    drop_cols = ['year', 'month', 'day', 'Country', 'lat', 'lon']
     
-    # month
-    # month = pd.get_dummies(df['month'], columns=["January","February","March", "April","May",
-    # "June","July","August","September","October","November","December"])
     month = pd.get_dummies(df['month'], prefix="month")
     df = pd.concat([df, month], axis=1)
     
@@ -37,7 +31,7 @@ def engin(df):
     return df
 
 def engin_2(df):
-    drop_cols = ['year', 'month', 'day', 'Country', 'City', 'lat',
+    drop_cols = ['year', 'month', 'day', 'Country', 'lat',
                 'lon','co_var', 'o3_var','so2_var', 'no2_var',
                 'temperature_var', 'humidity_var', 'pressure_var',
                 'ws_var','dew_var']
@@ -50,17 +44,17 @@ def engin_2(df):
     # weekday = pd.get_dummies(df['weekday'], prefix="week")
     # df = pd.concat([df,weekday], axis=1)
     
-#     # month
-#     month = pd.get_dummies(df['month'], prefix="month")
-#     df = pd.concat([df, month], axis=1)
+    # month
+    month = pd.get_dummies(df['month'], prefix="month")
+    df = pd.concat([df, month], axis=1)
     
-#     # year
-#     year = pd.get_dummies(df['year'], prefix="year")
-#     df = pd.concat([df, year], axis=1)
+    # year
+    year = pd.get_dummies(df['year'], prefix="year")
+    df = pd.concat([df, year], axis=1)
     
     # country
-    # country = pd.get_dummies(df['Country'])
-    # df = pd.concat([df, country], axis=1)
+    country = pd.get_dummies(df['Country'])
+    df = pd.concat([df, country], axis=1)
     
     
     df["co_std"] = np.sqrt(df["co_var"])
